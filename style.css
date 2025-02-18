@@ -1,0 +1,119 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Calculator Container */
+.calculator-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Display */
+.calculation {
+  background: rgba(0, 0, 0, 0.8);
+  color: #0ff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  text-align: right;
+  font-family: 'Courier New', monospace;
+  box-shadow: inset 0px 0px 8px rgba(0, 255, 255, 0.5);
+  
+  /* Fix Overflow */
+  width: 90%;
+  height: 60px;
+  overflow-x: auto;
+  overflow-y: hidden; /* No vertical scroll */
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 40px;
+  max-width: 280px;
+  border: 2px solid rgba(0, 255, 255, 0.3);
+}
+
+
+/* Button Grid */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Buttons */
+.calculator-button {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Number Buttons */
+.gray-button {
+  background: #3b3b3b;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.gray-button:hover {
+  background: #575757;
+}
+
+/* Operator Buttons */
+.orange-button {
+  background: #ff9500;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(255, 149, 0, 0.5);
+}
+
+.orange-button:hover {
+  background: #ffad42;
+}
+
+/* Equal Button */
+.equal-button {
+  background: #00cc66;
+  color: white;
+  font-size: 24px;
+  box-shadow: 0px 4px 6px rgba(0, 204, 102, 0.5);
+}
+
+.equal-button:hover {
+  background: #00e676;
+}
+
+/* Clear Button */
+.clear-button {
+  grid-column: span 4;
+  height: 50px;
+  background: red;
+  color: white;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(255, 0, 0, 0.5);
+}
+
+.clear-button:hover {
+  background: darkred;
+}
